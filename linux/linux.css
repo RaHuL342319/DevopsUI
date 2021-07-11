@@ -1,0 +1,53 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+}
+
+#main-google {
+  text-align: center;
+  position: relative;
+  top: 145px;
+}
+#google-h1 {
+  font-size: 100px;
+}
+#in1 {
+  height: 41px;
+  width: 550px;
+  border: 0.75px hidden lightgray;
+  border-radius: 20px;
+  padding-left: 15px;
+  font-size: 20px;
+  font-family: "Times New Roman";
+}
+#google-search {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  bottom: 20px;
+  margin: 10px;
+  font-size: 20px;
+  font-family: "Times New Roman";
+}
+#google-search:hover {
+	color: green;
+	background-color: white;
+}
+
+.google-letters {
+  margin-left: -24px;
+}
+body {
+  background-image: url("linux.png");
+}
+div#d1 {
+  color: white;
+  font-family: verdana;
+  font-size: 20px;
+  border:2px hidden  blue;
+}
+p {
+  color: cyan;
+  font-family: verdana;
+  font-size: 150%;
+}

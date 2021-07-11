@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="ProjectOne.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ProjectOne
+    </title>
+</head>
+<body>
+     <div id="main-google">
+         <h1 id="google-h1">
+             <span style="color:rgb(24, 162, 207)"class="google-letters ">D</span>
+             <span style="color:rgb(24, 162, 207)"class="google-letters ">o</span>
+             <span style="color:rgb(24, 162, 207)"class="google-letters ">c</span>
+             <span style="color:rgb(24, 162, 207)"class="google-letters ">k</span>
+             <span style="color:rgb(24, 162, 207)"class="google-letters ">e</span>
+             <span style="color:rgb(24, 162, 207)"class="google-letters ">r</span>
+         </h1>
+         <input id = "in1" type="text">
+         <ul>
+         <button id="google-search" onclick="lw()">Enter</button>
+         
+        </ul>
+      <!--<p>[root@localhost ~]# <input id='in1' /> </p> -->
+      <pre>
+      <p>OUTPUT</p>
+      <div id="d1"> </div>
+      </pre>
+     </div>
+
+<script>
+        function lw() {
+        
+        var i = document.getElementById("in1").value;
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://192.168.43.28/cgi-bin/lw.py?x="+ i, true); // it is k
+        
+        xhr.send(); // sending request
+        
+        // by onload event server tracking output from other pages
+        xhr.onload = function() {
+            // output from above url 
+            var output = xhr.responseText;
+            document.getElementById("d1").innerHTML = output;
+        }
+        }
+</script>
+</body>
+</html>

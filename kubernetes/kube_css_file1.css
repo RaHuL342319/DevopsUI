@@ -1,0 +1,342 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("https://www.cyberark.com/wp-content/uploads/2018/12/kubernetes-labs-post-1.jpg");
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page FOR PODS*/
+
+img {
+  opacity: 0.8;
+}
+
+.open-button {
+  background-color: rgb(44, 143, 97);
+  color: black;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: bold;
+  opacity: 0.8;
+  position: fixed;
+  /* for changing position */
+  top: 23px;
+  right: 28px;
+  width: 20%;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page  FOR DEPLOYMENT*/
+.open-button1 {
+  background-color: rosybrown;
+  color: black;
+  font-weight: bold;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+  opacity: 0.8;
+  position: fixed;
+  /* for changing position */
+  top: 100px;
+  right: 28px;
+  width: 20%;
+}
+
+/* for Exposing DEPLOYMENT*/
+.open-button2 {
+  background-color: #555;
+  color: black;
+  padding: 16px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+  opacity: 0.8;
+  position: fixed;
+  /* for changing position */
+  top: 177px;
+  right: 28px;
+  width: 20%;
+}
+
+/* for Scaling Replica */
+.open-button3 {
+  background-color: greenyellow;
+  color: black;
+  padding: 16px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+  opacity: 0.8;
+  position: fixed;
+  /* for changing position */
+  top: 254px;
+  right: 28px;
+  width: 20%;
+}
+
+/* for showing pods */
+.open-button4 {
+  background-color: violet;
+  color: black;
+  padding: 16px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+  opacity: 0.8;
+  position: fixed;
+  /* for changing position */
+  top: 331px;
+  right: 28px;
+  width: 20%;
+}
+
+/* for showing deployments */
+.open-button5 {
+  background-color: blueviolet;
+  color: black;
+  padding: 16px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+  opacity: 0.8;
+  position: fixed;
+  /* for changing position */
+  top: 408px;
+  right: 28px;
+  width: 20%;
+}
+/* for deleting */
+.open-button6 {
+  background-color: violet;
+  color: black;
+  padding: 16px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+  opacity: 0.8;
+  position: fixed;
+  /* for changing position */
+  top: 485px;
+  right: 28px;
+  width: 20%;
+}
+
+.open-button7 {
+  background-color: red;
+  color: black;
+  padding: 16px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+  opacity: 0.8;
+  position: fixed;
+  /* for changing position */
+  top: 562px;
+  right: 28px;
+  width: 20%;
+}
+
+.open-button8 {
+  background-color: red;
+  color: black;
+  padding: 16px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+  opacity: 0.8;
+  position: fixed;
+  /* for changing position */
+  top: 639px;
+  right: 28px;
+  width: 20%;
+}
+
+.open-button9 {
+  background-color: white;
+  color: black;
+  padding: 16px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+  opacity: 0.8;
+  position: fixed;
+  /* for changing position */
+  top: 700px;
+  right: 28px;
+  width: 20%;
+}
+
+.open-button10 {
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 60px;
+  opacity: 0.8;
+  position: fixed;
+  /* for changing position */
+  top: 0px;
+  left: 10px;
+  width: 37%;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  margin: auto;
+  width: 20%;
+  border: 2px solid #73ad21;
+  padding: 5px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: grey;
+}
+
+/* Full-width input fields */
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  font-size: medium;
+  border: none;
+  font-weight: bold;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the create button */
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the close button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+  background-color: black;
+  color: red;
+}
+
+.form-container .btn1:hover,
+.open-button1:hover {
+  opacity: 1;
+  background-color: black;
+  color: red;
+}
+
+.form-container .btn2:hover,
+.open-button2:hover {
+  opacity: 1;
+  background-color: black;
+  color: red;
+}
+
+.form-container .btn3:hover,
+.open-button3:hover {
+  opacity: 1;
+  background-color: black;
+  color: red;
+}
+
+.form-container .btn4:hover,
+.open-button4:hover {
+  opacity: 1;
+  background-color: black;
+  color: red;
+}
+
+.form-container .btn5:hover,
+.open-button5:hover {
+  opacity: 1;
+  background-color: black;
+  color: red;
+}
+
+.form-container .btn6:hover,
+.open-button6:hover {
+  opacity: 1;
+  background-color: black;
+  color: red;
+}
+
+.form-container .btn7:hover,
+.open-button7:hover {
+  opacity: 1;
+  background-color: black;
+  color: red;
+}
+
+.form-container .btn8:hover,
+.open-button8:hover {
+  opacity: 1;
+  background-color: black;
+  color: red;
+}
+
+.form-container .btn9:hover,
+.open-button9:hover {
+  opacity: 1;
+  background-color: black;
+  color: red;
+}
+
+div#d1 {
+  color: greenyellow;
+  font-family: verdana;
+  font-size: 100%;
+  font-weight: bolder;
+  text-shadow: teal;
+  position: fixed;
+  top: 420px;
+  left: 50px;
+  height: 300px;
+  border: grey solid 2px;
+  width: 70%;
+}
+p {
+  color: black;
+  background-color: maroon;
+  font-family: verdana;
+  font-size: 150%;
+  position: fixed;
+  font-weight: bolder;
+  /* for changing position */
+  top: 350px;
+  left: 400px;
+  width: 20%;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='kube_css_file1.css'>
+
+</head>
+<body>
+  <button class="open-button" onclick="openForm()">Create Pods</button>
+<!-- For Deployment-->
+<button class="open-button1" onclick="openForm1()">Create Deployment</button>
+<!-- For Expose Deployment-->
+<button class="open-button2" onclick="openForm2()">Expose Deployment</button>
+<!-- For Scale Replica-->
+<button class="open-button3" onclick="openForm3()">Scale Replica</button>
+<!-- for deleting the resources -->
+<button class="open-button7" onclick="openForm4()">Delete Resources</button>  
+<!-- For Show pods-->
+<button class="open-button4" onclick="showP()">Show Pods</button>
+
+<button class="open-button5" onclick="showD()">Show deployments</button>
+
+<button class="open-button6" onclick="showsvc()">Show Services</button>
+
+<button class="open-button8" onclick="DeleteAll()">Delete all Resources</button>
+
+<button class="open-button9" onclick="Clear()">Clear Screen</button>
+<button class="open-button10" >Kubernetes
+  <span style="color:black;background-color:violet">Web</span>    
+      <span style="color:white;background-color:black">UI</span>
+</button>
+
+
+
+
+
+
+
+<div class="form-popup" id="myForm">
+  <form  action="JavaScript:createpod()" class="form-container">
+
+    <label for="P"><b>Pod</b></label>
+    <input type="text" placeholder="Enter pod name" id="P" required>
+
+    <label for="I"><b>Image</b></label>
+    <input type="text" placeholder="Enter image Name" id="I" required>
+
+    <button type="submit" class="btn"   >Create</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<!-- For Deployment-->
+<!-- Change here -->
+<div class="form-popup" id="myForm1">
+  <form action="JavaScript:createdep()" class="form-container">
+
+    <label for="D"><b>Deployment</b></label>
+    <input type="text" placeholder="Enter deployment name" id="De" required>
+
+    <label for="I"><b>Image</b></label>
+    <input type="text" placeholder="Enter Image Name" id="Im" required>
+
+    <button type="submit" class="btn" >create</button>
+    <button type="button" class="btn cancel" onclick="closeForm1()">Close</button>
+    
+  </form>
+</div>
+
+
+<!-- For Exposing Deployment-->
+<!-- Change here -->
+<div class="form-popup" id="myForm2">
+  <form action="JavaScript:Expose()" class="form-container">
+
+    <label for="D"><b>Deplyment</b></label>
+    <input type="text" placeholder="Enter deployment name" id="Dep" required>
+
+    <label for="PN"><b>Port</b></label>
+    <input type="text" placeholder="Enter Port No." id="PN" required>
+
+    <button type="submit" class="btn" >Expose</button>
+    <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+    
+  </form>
+</div>
+
+
+<!-- For Scaling Deployment-->
+<!-- Form 3 -->
+<div class="form-popup" id="myForm3">
+  <form action="JavaScript:Scale()" class="form-container">
+
+    <label for="D"><b>Deplyment</b></label>
+    <input type="text" placeholder="Enter deployment name" id="Depl" required>
+
+    <label for="RS"><b>Replica</b></label>
+    <input type="text" placeholder="Enter Replica Size" id="RS" required>
+
+    <button type="submit" class="btn" >Scale</button>
+    <button type="button" class="btn cancel" onclick="closeForm3()">Close</button>
+    
+    
+  </form>
+</div>
+
+
+<!-- For Scaling Deployment-->
+<!-- Form 4 -->
+<div class="form-popup" id="myForm4">
+  <form action="JavaScript:DeleteResource()" class="form-container">
+
+    <label for="RT"><b>Resource Type</b></label>
+    <input type="text" placeholder="Enter resource type" id="RT" required>
+
+    <label for="name"><b>Name of Resources </b></label>
+    <input type="text" placeholder="Enter Resource name" id="name" required>
+
+    <button type="submit" class="btn" >Delete</button>
+    <button type="button" class="btn cancel" onclick="closeForm4()">Close</button>
+    
+    
+  </form>
+</div>
+
+
+<pre>
+    <p>             OUTPUT</p>
+    <div id="d1"> <center>hello</center> </div>
+</pre>
+</div>
+
+
+<script src='kube_fun1.js'></script>
+
+</body>
+</html>
+
